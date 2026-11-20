@@ -1,0 +1,14 @@
+{
+  "name": "helpflow",
+  "private": true,
+  "description": "Secure multi-tenant help desk with AI triage, SLA tracking and a tamper-evident audit trail",
+  "workspaces": ["server", "client"],
+  "scripts": {
+    "demo": "npm run build -w client && npm run demo -w server",
+    "dev": "npm run dev -w server & npm run dev -w client",
+    "build": "npm run build -w server && npm run build -w client",
+    "test": "npm test -w server",
+    "typecheck": "npm run typecheck -w server && npm run typecheck -w client",
+    "audit:prod": "npm audit --omit=dev --audit-level=high"
+  }
+}
